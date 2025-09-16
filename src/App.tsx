@@ -1,10 +1,12 @@
+import { StrictMode } from 'react';
 import './App.css';
+import PlaysPage from './PlaysPage';
 
 function App() {
   return (
-    <>
-      <main></main>
-    </>
+    <StrictMode>
+      <PlaysPage />
+    </StrictMode>
   );
 }
 

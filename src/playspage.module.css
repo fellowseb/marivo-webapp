@@ -1,0 +1,64 @@
+.plays {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+}
+
+.play {
+  list-style: none;
+  min-height: 100px;
+  width: 400px;
+  border: 2px solid #1f313c;
+  border-radius: 4px;
+  background-color: #e8e4da;
+  padding: 2px;
+  display: flex;
+  flex-direction: row;
+  transition: background-color 0.5s ease-out;
+}
+
+.play:hover {
+  cursor: pointer;
+  background-color: #fefefe;
+}
+
+.play:hover::after {
+  content: '>';
+  font-size: 1.7rem;
+}
+
+.playTitle {
+  font-size: 1.7rem;
+}
+
+.playDetailsValues {
+  font-weight: bold;
+}
+
+.playDetails {
+  display: flex;
+  flex-direction: column;
+  margin-left: 4px;
+  font-style: italic;
+}
+
+.playPoster {
+  background-color: #1f313c;
+  width: 100px;
+  height: 100px;
+  border-radius: 4px;
+}
+
+.playFilters {
+  min-height: 100px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.playListActions {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
