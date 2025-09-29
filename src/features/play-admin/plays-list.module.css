@@ -9,9 +9,21 @@
   list-style: none;
   min-height: 100px;
   width: 400px;
-  border: 2px solid #1f313c;
+  border: 1px solid #e4d6bc;
   border-radius: 4px;
   background-color: #e8e4da;
+  padding: 0px;
+  display: flex;
+  flex-direction: row;
+  transition: background-color 0.5s ease-out;
+}
+
+.play > a {
+  color: #1f313c;
+  text-decoration: none;
+  margin: 0px;
+  min-height: 100px;
+  width: 400px;
   padding: 2px;
   display: flex;
   flex-direction: row;
@@ -23,13 +35,24 @@
   background-color: #fefefe;
 }
 
+.play::after {
+  width: 60px;
+  height: 80px;
+  content: '';
+  background-position: 0 28px;
+  background-repeat: no-repeat;
+  background-image: url('/src/assets/book-closed.svg');
+}
+
 .play:hover::after {
-  content: '>';
-  font-size: 1.7rem;
+  background-repeat: no-repeat;
+  background-image: url('/src/assets/book-open-01.svg');
 }
 
 .playTitle {
+  font-family: 'Lobster Two', sans-serif;
   font-size: 1.7rem;
+  font-weight: bold;
 }
 
 .playDetailsValues {
@@ -48,17 +71,5 @@
   width: 100px;
   height: 100px;
   border-radius: 4px;
-}
-
-.playFilters {
-  min-height: 100px;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-.playListActions {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+  display: none;
 }
