@@ -11,6 +11,8 @@
     "format": "prettier . --write"
   },
   "dependencies": {
+    "@clerk/clerk-react": "^5.49.1",
+    "@clerk/react-router": "^2.0.1",
     "classnames": "^2.5.1",
     "fast-xml-parser": "^5.2.5",
     "react": "^19.1.1",

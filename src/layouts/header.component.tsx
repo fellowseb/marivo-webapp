@@ -1,16 +1,17 @@
 import classNames from 'classnames';
 import type { ReactNode } from 'react';
-import { NavLink } from 'react-router';
+import { Link, NavLink } from 'react-router';
 import styles from './header.module.css';
+import { SignOutButton, useUser } from '@clerk/clerk-react';
 
 interface HeaderProps {
   pageTitle: ReactNode;
-  userNickname: string;
   Menu?: ReactNode;
   PageMenu?: ReactNode;
 }
 
 function Header(props: HeaderProps) {
+  const user = useUser();
   return (
     <header className={styles.header}>
       <div className={styles.headerInner}>
@@ -22,14 +23,16 @@ function Header(props: HeaderProps) {
           {props.Menu}
         </div>
         <div className={styles.userContainer}>
-          <div className={styles.user}>{props.userNickname}</div>
-          <div className={styles.userActionsMenu}>
-            <a
+          <Link className={styles.user} to="/user-settings">
+            <div
               className={classNames([
                 styles.userAction,
                 styles.userActionSettings,
               ])}
-            ></a>
+            ></div>
+            {user.user?.fullName ?? ''}
+          </Link>
+          <div className={styles.userActionsMenu}>
             <a
               className={classNames([
                 styles.userAction,
@@ -45,6 +48,7 @@ function Header(props: HeaderProps) {
                 styles.userActionLogout,
               ])}
             ></a>
+            <SignOutButton component="a" />
           </div>
         </div>
       </div>
