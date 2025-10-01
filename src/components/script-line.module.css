@@ -1,4 +1,7 @@
 .repliqueCharacter {
+  font-family: 'Cutive Mono', monospace;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
   font-weight: bold;
 }
 
@@ -13,6 +16,9 @@
   display: flex;
   flex-direction: column;
   padding: 2px;
+  font-family: 'Cutive Mono', monospace;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
 }
 
 .repliqueText::selection {
@@ -40,6 +46,9 @@
   top: 8px;
   color: #999;
   cursor: default;
+  font-family: 'Cutive Mono', monospace;
+  font-optical-sizing: auto;
+  font-size: 1.2rem;
 }
 
 .repliqueVersion {
